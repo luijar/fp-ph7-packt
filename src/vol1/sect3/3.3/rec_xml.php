@@ -5,7 +5,6 @@
  */
 declare(strict_types=1);
 
-
 function walkXmlTree($node, callable $fn): void {	
 	
 	$fn($node);

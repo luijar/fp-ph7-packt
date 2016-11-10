@@ -1,3 +1,4 @@
+#!/usr/local/bin/php7
 <?php
 /**
  * Volume 1 - Fundamental of FP - Video 3.1

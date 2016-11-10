@@ -1,3 +1,4 @@
+#!/usr/local/bin/php7
 <?php
 /**
  * Volume 1 - Recursion
