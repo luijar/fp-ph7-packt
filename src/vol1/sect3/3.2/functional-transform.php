@@ -6,7 +6,7 @@
  * Transforming a non-pure, monolithic function to many pure functions
  */
 declare(strict_types=1);
-namespace Vol1\Sect3\Video1;
+namespace Vol1\Sect3\Video2;
 
 require_once 'db.php';
 require_once 'user.php';

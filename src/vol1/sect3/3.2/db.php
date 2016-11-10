@@ -5,7 +5,7 @@
  * DB helper for video 3.1
  */
 declare(strict_types=1);
-namespace Vol1\Sect3\Video1;
+namespace Vol1\Sect3\Video2;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 

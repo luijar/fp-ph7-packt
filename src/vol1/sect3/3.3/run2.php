@@ -5,6 +5,9 @@
  * Author: @luijar
  * Run 2
  */
+declare(strict_types=1);
+namespace Vol1\Sect3\Video3;
+
 require_once 'rec_xml.php';
 
 $xmlstr = <<<XML
@@ -33,13 +36,13 @@ $xmlstr = <<<XML
 </movies>
 XML;
 
-$movies = new SimpleXMLElement($xmlstr);
+$movies = new \SimpleXMLElement($xmlstr);
 
-walkXmlTree($movies, function ($node) {
+walkXmlTree($movies, function (\SimpleXMLElement $node): void {
 	printf("Found element: %s"  . PHP_EOL,  $node->getName());
 });
 
-walkXmlTree($movies, function ($node) {
+walkXmlTree($movies, function (\SimpleXMLElement $node): void {
 	if($node->getName() === 'actor') {
 		printf("Found an actor!: %s"  . PHP_EOL,  $node->__toString());	
 	}	

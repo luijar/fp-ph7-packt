@@ -5,6 +5,7 @@
  * Author: @luijar
  * Run 1
  */
+namespace Vol1\Sect3\Video3;
 require_once 'array_add.php';
 
 $source = [1, 2, 3, 4, 5, 6, 7, 8, 9];

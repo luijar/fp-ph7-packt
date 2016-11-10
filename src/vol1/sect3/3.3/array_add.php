@@ -4,6 +4,7 @@
  * Author: @luijar
  */
 declare(strict_types=1);
+namespace Vol1\Sect3\Video3;
 
 // identity :: a -> a
 function identity($x) { 
@@ -12,7 +13,7 @@ function identity($x) {
 
 // array_clone :: array -> array
 function array_clone(array $src = []): array {
-	return array_map('identity', $src);
+	return array_map(__NAMESPACE__.'\identity', $src);
 } 
 
 // array_add :: array -> float

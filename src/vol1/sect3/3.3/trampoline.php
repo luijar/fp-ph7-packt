@@ -4,6 +4,7 @@
  * Author: @luijar
  */
 declare(strict_types=1);
+namespace Vol1\Sect3\Video3;
 
 // trampoline :: (callable, array) -> mixed
 function trampoline(callable $func, array $args = []) { 

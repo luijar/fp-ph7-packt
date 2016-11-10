@@ -6,7 +6,7 @@
  */
 declare(strict_types=1);
 
-namespace Vol1\Sect3\Video1;
+namespace Vol1\Sect3\Video2;
 
 class User {
 	private $id;

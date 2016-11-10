@@ -5,6 +5,7 @@
  * Author: @luijar
  * Run 2
  */
+namespace Vol1\Sect3\Video3;
 require_once 'trampoline.php';
 
 function factorial(int $n) {
@@ -20,4 +21,4 @@ function factorial(int $n) {
 }
 
 //echo ''. factorial(30000);
-echo trampoline('factorial', array(30000));
+echo trampoline(__NAMESPACE__. '\factorial', array(30000));
