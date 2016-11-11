@@ -5,86 +5,20 @@
  * Author: @luijar
  * Run 2
  */
-declare(strict_types=1);
 namespace Vol1\Sect3\Video3;
+require_once 'trampoline.php';
 
-require_once 'rec_xml.php';
+function factorial(int $n) {
+    $product = function($min, $max) use($n, &$product) { 
+      return $min == $n ? 
+        $max : 
+        //$product(bcadd($min, 1), bcmul($min, $max));
+        function() use(&$product, $min, $max) {
+            return $product(bcadd($min, 1), bcmul($min, $max));
+        };
+    };
+    return $product(1, $n);
+}
 
-$xmlstr = <<<XML
-<?xml version='1.0' standalone='yes'?>
-<movies>
- <movie>
-  <title>PHP: Behind the Parser</title>
-  <characters>
-   <character>
-    <name>Ms. Coder</name>
-    <actor>Onlivia Actora</actor>
-   </character>
-   <character>
-    <name>Mr. Coder</name>
-    <actor>El Act&#211;r</actor>
-   </character>
-  </characters>
-  <plot>
-   	So, this language. It's like, a programming language. Or is it a
-   	scripting language? All is revealed in this thrilling horror spoof
-   	of a documentary.
-  </plot>  
-  <rating type="thumbs">7</rating>
-  <rating type="stars">5</rating>
- </movie>
-</movies>
-XML;
-
-$movies = new \SimpleXMLElement($xmlstr);
-
-walkXmlTree($movies, function (\SimpleXMLElement $node): void {
-	printf("Found element: %s"  . PHP_EOL,  $node->getName());
-});
-
-walkXmlTree($movies, function (\SimpleXMLElement $node): void {
-	if($node->getName() === 'actor') {
-		printf("Found an actor!: %s"  . PHP_EOL,  $node->__toString());	
-	}	
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//echo ''. factorial(30000);
+echo trampoline(__NAMESPACE__. '\factorial', array(30000));
