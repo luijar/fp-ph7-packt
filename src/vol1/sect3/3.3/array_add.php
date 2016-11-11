@@ -16,6 +16,7 @@ function array_clone(array $src = []): array {
 	return array_map(__NAMESPACE__.'\identity', $src);
 } 
 
+//TODO: loop through an array and add all of its elements
 // array_add :: array -> float
 function array_add(array $arr = []): float {
 	
