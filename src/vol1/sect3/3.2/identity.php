@@ -1,7 +1,7 @@
 #!/usr/local/bin/php7
 <?php
 /**
- * Volume 1 - Fundamental of FP - Video 3.1
+ * Volume 1 - Fundamental of FP - Video 3.2
  * Author: @luijar
  * Identity function
  */
@@ -15,18 +15,17 @@ function identity($a) {
 
 $fruits = array('lemons' => 1, 'oranges' => 4, 'bananas' => 5, 'apples' => 10);
 
+// create a copy of the array (OOP)
 $fruitsArrayObject = new \ArrayObject($fruits);
 $fruitsArrayObject['pears'] = 4;
-
-// create a copy of the array (OOP)
-$copy = $fruitsArrayObject->getArrayCopy();
 print 'First copy (OOP)'. PHP_EOL;
+$copy = $fruitsArrayObject->getArrayCopy();
 print_r($copy);
 
 // use identity to create a copy (FP)
+print 'Second copy (FP)'. PHP_EOL;
 $anotherCopy = array_map(__NAMESPACE__. '\identity', $fruits);
 $anotherCopy['pears'] = 4;
-print 'Second copy (FP)'. PHP_EOL;
 print_r($anotherCopy);
 
 // show original unchanged

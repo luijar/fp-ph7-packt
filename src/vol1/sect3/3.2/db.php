@@ -1,8 +1,8 @@
 <?php
 /**
- * Volume 1 - Fundamental of FP - Video 3.1
+ * Volume 1 - Fundamental of FP - Video 3.2
  * Author: @luijar
- * DB helper for video 3.1
+ * DB helper for video 3.2
  */
 declare(strict_types=1);
 namespace Vol1\Sect3\Video2;

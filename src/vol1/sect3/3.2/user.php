@@ -1,8 +1,8 @@
 <?php
 /**
- * Volume 1 - Fundamental of FP - Video 3.1
+ * Volume 1 - Fundamental of FP - Video 3.2
  * Author: @luijar
- * Identity function
+ * User model
  */
 declare(strict_types=1);
 

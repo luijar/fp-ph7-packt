@@ -1,7 +1,7 @@
 #!/usr/local/bin/php7
 <?php
 /**
- * Volume 1 - Fundamental of FP - Video 3.1
+ * Volume 1 - Fundamental of FP - Video 3.2
  * Author: @luijar
  * Transforming a non-pure, monolithic function to many pure functions
  */
