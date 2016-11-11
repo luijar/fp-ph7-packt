@@ -16,14 +16,16 @@ function identity($a) {
 $fruits = array('lemons' => 1, 'oranges' => 4, 'bananas' => 5, 'apples' => 10);
 
 // create a copy of the array (OOP)
+print 'First copy (OOP)'. PHP_EOL;
+
 $fruitsArrayObject = new \ArrayObject($fruits);
 $fruitsArrayObject['pears'] = 4;
-print 'First copy (OOP)'. PHP_EOL;
 $copy = $fruitsArrayObject->getArrayCopy();
 print_r($copy);
 
 // use identity to create a copy (FP)
 print 'Second copy (FP)'. PHP_EOL;
+
 $anotherCopy = array_map(__NAMESPACE__. '\identity', $fruits);
 $anotherCopy['pears'] = 4;
 print_r($anotherCopy);
