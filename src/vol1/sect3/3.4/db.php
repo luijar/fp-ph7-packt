@@ -2,10 +2,10 @@
 /**
  * Volume 1 - Fundamental of FP - Video 3.2
  * Author: @luijar
- * DB helper for video 3.2
+ * DB helper for video 3.4
  */
 declare(strict_types=1);
-namespace Vol1\Sect3\Video2;
+namespace Vol1\Sect3\Video4;
 
 require_once __DIR__ . '/../../../../vendor/autoload.php';
 

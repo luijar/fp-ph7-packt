@@ -1,12 +1,12 @@
 #!/usr/local/bin/php7
 <?php
 /**
- * Volume 1 - Fundamental of FP - Video 3.2
+ * Volume 1 - Fundamental of FP - Video 3.4
  * Author: @luijar
  * Transforming a non-pure, monolithic function to many pure functions
  */
 declare(strict_types=1);
-namespace Vol1\Sect3\Video2;
+namespace Vol1\Sect3\Video4;
 
 require_once 'db.php';
 require_once 'user.php';

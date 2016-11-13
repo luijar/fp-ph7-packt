@@ -1,12 +1,12 @@
 <?php
 /**
- * Volume 1 - Fundamental of FP - Video 3.2
+ * Volume 1 - Fundamental of FP - Video 3.4
  * Author: @luijar
  * User model
  */
 declare(strict_types=1);
 
-namespace Vol1\Sect3\Video2;
+namespace Vol1\Sect3\Video4;
 
 class User {
 	private $id;
