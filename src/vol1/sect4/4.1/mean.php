@@ -3,7 +3,7 @@
 /**
  * Volume 1 - Functional evaluation strategies - Video 4.1
  * Author: @luijar
- * Pure functions and lazy evaluation
+ * Lazy evaluation vs eager evaluation
  */
 declare(strict_types=1);
 namespace Vol1\Sect4\Video1;

@@ -20,3 +20,26 @@ function partial(/* $func, $args... */) {
 //------------------------------------------------//
 //                     Usage 
 //------------------------------------------------//
+function multipleBy(int $a, int $b): int {
+	return $a * $b;			
+}
+
+$by2 = partial(__NAMESPACE__. '\multipleBy', 2);
+
+assert('4 === $by2(2)', new \RuntimeException('Failed comparison!'));
+
+// Make even numbers
+print_r(
+	array_map($by2, [1, 2, 3, 4, 5])
+);
+
+$mapBy2 = partial('array_map', $by2);
+
+print_r(
+	$mapBy2([3, 4, 5, 6, 7])
+);
+
+print_r(
+	$mapBy2([9, 8, 7, 6, 5])
+);
+
