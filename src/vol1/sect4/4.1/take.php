@@ -19,7 +19,8 @@ function array_take(array $array, int $amount): array {
 $source = range(1, 5);  //-> [1, 2, 4, 3, 5]
 array_take($source, 2); //-> [1, 2]
 
+//-> PHP Warning:  range(): The supplied range exceeds the maximum array size
 $hugeArray = range(1, PHP_INT_MAX);  // doesn't work in PHP
 array_take($hugeArray, 2);
-//-> PHP Warning:  range(): The supplied range exceeds the maximum array size
+
 
