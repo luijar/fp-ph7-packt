@@ -1,2 +1,4 @@
 vendor
 .phpintel
+.DS_Store
+*.txt
