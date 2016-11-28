@@ -8,7 +8,7 @@
 declare(strict_types=1);
 namespace Vol1\Sect4\Video1;
 
-// g_range :: (int, int, int?) -> Generator
+// xrange :: (int, int, int?) -> Generator
 function xrange(int $start, int $end, int $step = 1): \Generator {
 	for ($i = $start; $i <= $end; $i++) {        
         yield $i * $step;

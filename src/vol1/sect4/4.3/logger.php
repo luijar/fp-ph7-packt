@@ -7,7 +7,8 @@
 declare(strict_types=1);
 namespace Vol1\Sect4\Video3;
 
-function partial(/* $func, $args... */) {
+// partial :: mixed -> callable
+function partial(/* $func, $args... */): callable {
     $args = func_get_args();
     $func = array_shift($args);
 
