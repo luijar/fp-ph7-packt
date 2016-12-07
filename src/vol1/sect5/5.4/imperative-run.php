@@ -1,16 +1,15 @@
+#!/usr/local/bin/php7
 <?php 
 /**
- * Introduction: Imperative vs Functional
- * Author: Luis Atencio
- * Imperative
- * Find out the most won Nobel Prize category over the years
- */	
+ * Volume 1 - Composition - Video 5.4
+ * Author: @luijar
+ * Imperative version
+ */
 declare(strict_types=1);
+namespace Vol1\Sect5\Video4;
 
-namespace Intro;
-
-function mostDecoratedCategory(): void {
-	$contents = file_get_contents('prize.json');
+function mostDecoratedCategory(string $path): array {
+	$contents = file_get_contents($path);
 	if(!$contents) {
 		throw new \RuntimeException('Unable to read file!');
 	}
@@ -31,13 +30,11 @@ function mostDecoratedCategory(): void {
 		return $v2 - $v1;
 	});
 
-	$winnerCategory = key($result);
-		
-	echo 'Winner category: '. $winnerCategory;
-	echo 'For: '. $result[$winnerCategory]. ' of awards';	
+	return array_slice($result, 0, 1);
 }
 
 
 // run program
-mostDecoratedCategory();
+$result = mostDecoratedCategory('prize.json');
+print_r($result);
 

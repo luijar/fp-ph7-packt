@@ -33,8 +33,13 @@ function xexplode(string $delimeter): callable {
 	};
 }
 
-$tokenizer = xexplode(' ');
+function xcount(array $items): int {
+	return empty($items) ? 0 : 
+		1 + xcount(array_slice($items, 1));
+}
 
-$countWords = compose('count', $tokenizer);
+$tokenizer = xexplode(' ');
+$xcount = __NAMESPACE__. '\xcount';
+$countWords = compose($xcount, $tokenizer);
 
 printf("Number of words %s". PHP_EOL, $countWords($text));
