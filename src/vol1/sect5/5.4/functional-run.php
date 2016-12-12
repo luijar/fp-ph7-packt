@@ -12,7 +12,15 @@ require_once 'functional-helpers.php';
 use P;
 
 // mostDecoratedCategory :: string -> array
-// TODO
+$mostDecoratedCategory = P::compose(					
+		App::firstElement(),
+		P::sort('P::negate'),
+		App::accumulate(),
+		P::map(P::prop('category')),
+		P::prop('prizes'),
+		App::toJson(),	
+		App::readFile()
+	);
 
 // run program
 $result = $mostDecoratedCategory('prize.json');

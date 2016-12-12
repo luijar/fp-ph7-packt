@@ -1,7 +1,7 @@
 #!/usr/local/bin/php7
 <?php
 /**
- * Volume 1 - Composition - Video 5.2
+ * Volume 1 - Composition with PRamda- Video 5.3
  * Author: @luijar
  * Simple composition example with PRamda
  */
