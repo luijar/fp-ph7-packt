@@ -21,6 +21,5 @@ TEXT;
 
 $xexplode = P::curry2('explode')(' ');
 $countWords = P::compose('count', $xexplode);
-$countWords($input);
 
 printf("Number of words %s". PHP_EOL, $countWords($text));
