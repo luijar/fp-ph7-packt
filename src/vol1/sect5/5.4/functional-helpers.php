@@ -31,7 +31,7 @@ class App {
 		[]);
 	}
 
-  // firstElement :: () -> array -> mixed
+    // firstElement :: () -> array -> mixed
 	public static function firstElement(): callable {
 		return function ($array) {
 			return P::head($array);

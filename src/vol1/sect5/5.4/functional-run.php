@@ -14,6 +14,7 @@ use P;
 // mostDecoratedCategory :: string -> array
 $mostDecoratedCategory = P::compose(					
 		App::firstElement(),
+		P::sort('P::negate'),
 		App::accumulate(),
 		P::map(P::prop('category')),
 		P::prop('prizes'),
