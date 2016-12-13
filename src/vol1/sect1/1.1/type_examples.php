@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Vol1\Sect1\Video1;
 
-function add(float $a, string $b): float {
+function add(float $a, float $b): float {
 	return $a + $b;
 }
 
